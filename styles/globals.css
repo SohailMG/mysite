@@ -13,4 +13,35 @@
         @apply text-3xl md:hidden
 
     }
+    .media-links{
+        @apply cursor-pointer 
+
+    }
+}
+#Facebook {
+  animation: float 3s ease-in-out infinite alternate;
+}
+#Instagram {
+  animation: float 3s ease-in-out infinite alternate 0.5s;
+}
+#Linkedin {
+  animation: float 3s ease-in-out infinite alternate 1s;
+}
+#Github {
+  animation: float 3s ease-in-out infinite alternate 2s;
+}
+.social-link:hover {
+  cursor: pointer;
+  animation: none;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
