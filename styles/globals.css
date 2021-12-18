@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .sidebar-options{
+        @apply flex items-center mt-5 py-2 px-8 text-gray-600 hover:border-r-4 hover:text-gray-200 hover:border-orange-500
+    }
+    .sidebar-text{
+        @apply hidden md:inline-flex mx-4 font-medium
+    }
+    .sidebar-icons{
+        @apply text-3xl md:hidden
+
+    }
+}
