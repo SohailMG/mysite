@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.1.2",
+    "@sendgrid/mail": "^7.6.0",
     "@svgr/webpack": "^6.1.2",
     "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",

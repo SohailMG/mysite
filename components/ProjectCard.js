@@ -1,13 +1,18 @@
 import { CgLivePhoto } from "react-icons/cg";
 import { AiFillGithub } from "react-icons/ai";
+import { GoPrimitiveDot } from "react-icons/go";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 function ProjectCard({ project }) {
-     useEffect(() => {
-       AOS.init();
-     }, []);
+  const [techId, settechId] = useState(null);
+  const displayText = (id) => {
+    settechId(id);
+  };
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div
       data-aos="fade-up"
@@ -25,8 +30,18 @@ function ProjectCard({ project }) {
           Tech Stack
         </h3>
         <div className="flex gap-2  mt-4 flex-wrap  md:space-y-0">
-          {project.techStack.map(({ name, Icon },index) => (
-            <Icon key={index} className="text-gray-800 bg-green-200 p-1 font-semibold rounded-lg  text-3xl"></Icon>
+          {project.techStack.map(({ name, Icon }, index) => (
+            <div className="relative">
+              <Icon
+                key={index}
+                onMouseLeave={() => settechId(null)}
+                onMouseOver={() => displayText(index)}
+                className="text-gray-800 cursor-pointer bg-green-200 p-1 font-semibold rounded-lg  text-3xl"
+              />
+              {index == techId && (
+                <span className="absolute text-gray-200">{name}</span>
+              )}
+            </div>
           ))}
         </div>
         {/* Buttons */}
@@ -36,7 +51,7 @@ function ProjectCard({ project }) {
               onClick={() => window.open(project.livesite)}
               className="project-btns"
             >
-              <CgLivePhoto className="text-lg text-green-400 mr-2 animate-spin" />
+              <GoPrimitiveDot className="text-lg text-green-400 mr-2 animate-ping" />
               Live Site
             </button>
           )}
@@ -52,8 +67,14 @@ function ProjectCard({ project }) {
       {/* right card */}
       <div className="animate__animated animate__fadeInUp">
         {project.demo ? (
-        <video src={project.demo} width={500} height={500} controls></video>):(
-            <Image src={project.image} objectFit="contain" width={500} height={400}/>
+          <video src={project.demo} width={500} height={500} controls></video>
+        ) : (
+          <Image
+            src={project.image}
+            objectFit="contain"
+            width={500}
+            height={400}
+          />
         )}
       </div>
     </div>

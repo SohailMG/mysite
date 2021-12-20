@@ -12,10 +12,34 @@ const {
   SiApachemaven,
   SiStripe,
   SiJavascript,
+  SiMysql,
+  SiJunit5,
 } = require("react-icons/si");
 const { AiFillHtml5 } = require("react-icons/ai");
 
 const projectsList = [
+  {
+    id: 4,
+    name: "Price Finder",
+    description:
+      "This is a university project where I implemented a price comparison website on Yeezys,  using Java with Jsoup and Selenium to scrape the data from each website. Selenium was used for some scrapers in cases . I used Spring framework with annotations to manage classes. The data scraped was stored in an SQL database using Hibernate. Threads were used for each scraper to help run scraper simultaneously without interruptions where each would run in a separate thread. I used REACTJS with TailwindCss to display the data from a backend RESTAPI.",
+    techStack: [
+      { name: "Reactjs", Icon: FaReact },
+      { name: "TailwindCss", Icon: SiTailwindcss },
+      ,
+      { name: "Java", Icon: FaJava },
+      { name: "Spring", Icon: SiSpring },
+      ,
+      { name: "Hibernate", Icon: SiHibernate },
+      { name: "Maven", Icon: SiApachemaven },
+      { name: "MySQL", Icon: SiMysql },
+      { name: "JUNIT", Icon: SiJunit5 },
+    ],
+    livesite: false,
+    demo: "/videos/priceFinderDemo.mp4",
+    githubRepo: "https://github.com/SohailMG/price-finder",
+    image: "/images/priceFinder.png",
+  },
   {
     id: 1,
     name: "Uber Clone",
