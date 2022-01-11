@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FaShieldAlt } from "react-icons/fa";
 import CheckMark from "./CheckMark";
 
 function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [responseMsg, setResponseMsg] = useState("");
+  const formRef = useRef();
 
   const handleSubmit = async (e) => {
     setIsLoading(true);
-    setResponseMsg("Sending message....")
+    setResponseMsg("Sending message....");
     e.preventDefault();
     const formData = {};
     Array.from(e.currentTarget.elements).forEach((field) => {
+      if(!field.value)return;
       if (!field.name) return;
       formData[field.name] = field.value;
     });
@@ -20,11 +22,9 @@ function ContactForm() {
       body: JSON.stringify(formData),
     }).then((response) => {
       if (response.status === 200) {
-        setTimeout(() => {
-          setResponseMsg("Message sent successfully!");
-          setIsLoading(false);
-          e.target.reset();
-        }, 2000);
+        setResponseMsg("Message sent successfully!");
+        setIsLoading(false);
+        e.target.reset();
       } else {
         setResponseMsg("Message failed!");
       }
@@ -40,6 +40,7 @@ function ContactForm() {
               First Name
             </label>
             <input
+              required
               name="firstname"
               className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               id="grid-first-name"
@@ -52,6 +53,7 @@ function ContactForm() {
               Last Name
             </label>
             <input
+              required
               name="lastname"
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-last-name"
@@ -66,6 +68,7 @@ function ContactForm() {
               E-mail
             </label>
             <input
+              required
               name="email"
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="email"
@@ -79,6 +82,7 @@ function ContactForm() {
               Message
             </label>
             <textarea
+              required
               name="message"
               className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
               id="message"

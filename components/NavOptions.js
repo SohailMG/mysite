@@ -27,7 +27,7 @@ function NavOptions({ Icon, text, href ,id}) {
       onClick={(e) => changePage(e, href, id)}
     >
       <span className="sidebar-text">{text}</span>
-      <Icon className="sidebar-icons" />
+      <Icon  className="sidebar-icons" />
     </a>
   );
 }
