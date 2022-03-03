@@ -1,6 +1,35 @@
 import { GiCycling } from "react-icons/gi";
 import { IoMdFootball } from "react-icons/io";
 import { CgGym } from "react-icons/cg";
+import {
+  FaReact,
+  FaVuejs,
+  FaJava,
+  FaGitAlt,
+  FaNodeJs,
+  FaAws,
+  FaFigma,
+} from "react-icons/fa";
+import { DiJavascript1, DiCss3 } from "react-icons/di";
+import {
+  SiRedux,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiFirebase,
+  SiGooglecloud,
+  SiCplusplus,
+  SiSpring,
+  SiHibernate,
+  SiApachemaven,
+  SiStripe,
+  SiJavascript,
+  SiMysql,
+  SiJunit5,
+  SiHtml5,
+  SiCss3,
+  SiVuedotjs,
+} from "react-icons/si";
+import { AiFillHtml5 } from "react-icons/ai";
 export const ResumeData = {
   aboutme:
     "Curious , Creative , Computer science student skilled in problem solving with strong foundation on programming languages related to the web,looking to become part of a collaborative enviroment and develop as a programmer",
@@ -9,29 +38,34 @@ export const ResumeData = {
     phone: "07510374652",
   },
   skills: [
-    { id: 12, name: "HTML", icon: "devicon-html5-plain colored" },
-    { id: 12, name: "CSS", icon: "devicon-css3-plain colored" },
-    { id: 13, name: "React", icon: "devicon-react-original-wordmark colored" },
-    { id: 14, name: "Redux", icon: "devicon-redux-original colored" },
-    { id: 15, name: "Nextjs", icon: "devicon-nextjs-original-wordmark" },
-    { id: 16, name: "Vue", icon: "devicon-vuejs-plain-wordmark" },
+    { level: "90%", id: 11, name: "HTML", icon: SiHtml5 },
+    { level: "70%", id: 33, name: "Figma", icon: FaFigma },
+    { level: "80%", id: 12, name: "CSS", icon: SiCss3 },
+    { level: "80%", id: 13, name: "React", icon: FaReact },
+    { level: "50%", id: 14, name: "Redux", icon: SiRedux },
+    { level: "50%", id: 15, name: "Nextjs", icon: SiNextdotjs },
+    { level: "70%", id: 16, name: "Vue", icon: FaVuejs },
     {
-      id: 16,
+      level: "60%",
+      id: 42,
       name: "Google Cloud Services",
-      icon: "devicon-googlecloud-plain colored",
+      icon: SiGooglecloud,
     },
-    { id: 16, name: "Java", icon: "devicon-java-plain colored" },
+    { level: "70%", id: 129, name: "Java", icon: FaJava },
     {
-      id: 16,
+      level: "80%",
+      id: 65,
       name: "Javascript",
-      icon: "devicon-javascript-plain colored",
+      icon: DiJavascript1,
     },
     {
-      id: 16,
+      level: "80%",
+      id: 76,
       name: "Tailwindcss",
-      icon: "devicon-tailwindcss-original-wordmark colored",
+      icon: SiTailwindcss,
     },
-    { id: 16, name: "Nodejs", icon: "devicon-react-original-wordmark colored" },
+    { level: "50%", id: 89, name: "Nodejs", icon: FaNodeJs },
+    { level: "60%", id: 32, name: "AWS", icon: FaAws },
   ],
   hobbies: [
     { id: 22, name: "Cycling", icon: GiCycling },
@@ -42,8 +76,8 @@ export const ResumeData = {
     {
       name: "Middlesex University",
       type: "Bsc Computer Science Final Year",
-      from: "10/2021",
-      to: "05/2022",
+      from: "Oct-2021",
+      to: "May-2022",
       grade: "Predicted - First Class",
       topics: [
         { topic: "Advanced Web Development with Big Data" },
@@ -55,8 +89,8 @@ export const ResumeData = {
     {
       name: "Middlesex University",
       type: "Bsc Computer Science Second Year",
-      from: "10/2020",
-      to: "05/2021",
+      from: "Oct-2020",
+      to: "May-2021",
       grade: "First Class",
       topics: [
         { topic: "Object-Oriented-Programming with java" },
@@ -77,8 +111,8 @@ export const ResumeData = {
     {
       name: "Middlesex University",
       type: "Bsc Computer Science First Year",
-      from: "09/2019",
-      to: "05/2020",
+      from: "Sep-2019",
+      to: "May-2020",
       grade: "Satisfactury and Continuing ",
       topics: [
         {
@@ -92,8 +126,8 @@ export const ResumeData = {
     {
       name: "Hammersmith & West London College",
       type: "National Extended Diploma in IT",
-      from: "09/2015",
-      to: "07/2019",
+      from: "Sep-2015",
+      to: "Jul-2019",
       grade:
         "Pearson BTEC Level 3, National Extended Diploma in IT Awarded |Distinction*,Distinction*,Distinction*",
       topics: [
@@ -106,8 +140,8 @@ export const ResumeData = {
     {
       name: "Rooks Heath Secondary School",
       type: "GCSE",
-      from: "01/2013",
-      to: "07/2015",
+      from: "Jan-2013",
+      to: "Jul-2015",
       grade: "English(C), Maths(C) ,Arabic(A*), Sociology (D), Media(B)",
       topics: [
         { topic: "Media" },
@@ -115,6 +149,40 @@ export const ResumeData = {
         { topic: "DT design and technologyird" },
         { topic: "IT" },
       ],
+    },
+  ],
+  companies: [
+    {
+      role: "Event Staff",
+      name: "APCOA",
+      from: "Mar-2019",
+      to: "Present",
+      tasks:
+        "Greeting customers as they arrive to the carpark .Making sure the car park is well organised and appropriate spaces are available Providing regular reports to the supervisor . Processing customer tickets and passes Communicating with co-workers through the radio",
+    },
+    {
+      role: "Safety Steward",
+      name: "Event & Exhibition Partnership",
+      from: "Nov-2019",
+      to: "Jan-2021",
+      tasks:
+        "working as a safety steward at winter wonderland,meeting and greeting customers . queue and crowd management.and providing guidance to customers attending the event.",
+    },
+    {
+      role: "Frontend Developer",
+      name: "National Algerian Centre",
+      from: "Apr-2017",
+      to: "May-2017",
+      tasks:
+        "Designing a frontend for the organisation's website using HTML,CSS and JavaScript.organise regular events for local community.helped with serving customers at the coffee stall",
+    },
+    {
+      role: "Sales Assitant",
+      name: "Savers Health & Beauty",
+      from: "Nov-2016",
+      to: "Nov-2016",
+      tasks:
+        "Serving customers and dealing with their requests .Stocking shelves and doing face-ups. Selling products to customers outside the store.Working in a fast-paced environment",
     },
   ],
 };

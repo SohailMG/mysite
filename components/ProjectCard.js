@@ -23,7 +23,7 @@ function ProjectCard({ project }) {
         <h1 className="animate__animated animate__fadeInUp text-3xl text-orange-200">
           {project.name}
         </h1>
-        <p className="animate__animated animate__fadeInUp text-md text-gray-400 text-justify">
+        <p className="animate__animated animate__fadeInUp text-xs md:text-lg text-gray-400 text-justify">
           {project.description}
         </p>
         <h3 className="animate__animated animate__fadeInUp text-lg text-orange-200">

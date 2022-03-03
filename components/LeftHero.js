@@ -42,7 +42,7 @@ function LeftHero() {
         </button>
       </div>
       {/* bottom section of hero */}
-      <div className="mt-40">
+      <div className="mt-10">
         <h1 className="animate__animated animate__fadeInUp text-md p-4 text-orange-500">
           Skills -{" "}
         </h1>

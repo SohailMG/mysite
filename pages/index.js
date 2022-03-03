@@ -34,7 +34,7 @@ export default function Home() {
         />
       </Head>
 
-      <div className="Home flex items-start">
+      <div className="Home main-container">
         {/* Sidebar */}
         <Sidebar />
         {/* Main content */}
