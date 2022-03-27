@@ -14,10 +14,29 @@ const {
   SiJavascript,
   SiMysql,
   SiJunit5,
+  SiAmazonaws,
+  SiTypescript,
+  SiReact,
 } = require("react-icons/si");
 const { AiFillHtml5 } = require("react-icons/ai");
 
 const projectsList = [
+  {
+    id: 12,
+    name: "Covid Trakr",
+    description:
+      "A Covid-19 data visualiser using the OpenData RESTAPI in combination with various AWS(Amazon Web Services) to provide serverless functionality such as ApiGateway,lambda function as well as machine learning services such as sagemaker to perform future predictions on covid cases along with sentiment analysis on twitter posts using twitter api",
+    techStack: [
+      { name: "Typescript", Icon: SiTypescript },
+      { name: "Reactjs", Icon: SiReact },
+      { name: "Tailwindcss", Icon: SiTailwindcss },
+      { name: "AWS", Icon: SiAmazonaws },
+    ],
+    livesite: "https://cst3130-cw2.s3.amazonaws.com/index.html",
+    demo: false,
+    githubRepo: "https://github.com/SohailMG/covid-tracker",
+    image: "/images/CovidTrakr.png",
+  },
   {
     id: 4,
     name: "Price Finder",
@@ -92,6 +111,3 @@ const projectsList = [
   },
 ];
 module.exports = projectsList;
-
-
-

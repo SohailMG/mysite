@@ -19,7 +19,6 @@ export default function Home() {
         <title>Sohail Gsais</title>
         <meta
           http-equiv="content-language"
-          content="en"
           name="description"
           content="A computer science student with keen interest in mobile and web development"
         ></meta>
@@ -32,6 +31,9 @@ export default function Home() {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
+        <link rel="favicon" href="/public/favicon.ico" />
+        <link rel="manifest" href="manifest.json" />
+        <script src="service-registery.js"></script>
       </Head>
 
       <div className="Home main-container">

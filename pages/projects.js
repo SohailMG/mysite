@@ -21,7 +21,7 @@ const projects = () => {
           </h1>
           <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
             <div class="container">
-              <div class="flex flex-wrap -mx-4">
+              <div class="flex flex-wrap justify-center -mx-4">
                 {projectsList.map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}

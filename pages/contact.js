@@ -1,13 +1,13 @@
 import ContactForm from "../components/ContactForm";
 import ContactOptions from "../components/ContactOptions";
 import Sidebar from "../components/Sidebar";
-import Head from 'next/head'
+import Head from "next/head";
 import { RiChatSmile2Fill } from "react-icons/ri";
 
 function Contact() {
   return (
     <div
-      className="min-h-screen flex items-start "
+      className="min-h-screen flex justify-center"
       style={{
         backgroundImage: "url(" + `${require("../assets/home-bg.svg")}` + ")",
         width: "100%",
@@ -17,7 +17,7 @@ function Contact() {
     >
       <Head>
         <title>Sohail::Contact</title>
-        </Head>
+      </Head>
       <Sidebar />
       <main className="flex py-10 ">
         <div className="flex flex-col md:mx-auto items-center justify-center">
